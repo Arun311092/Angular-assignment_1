@@ -1,6 +1,9 @@
 <p>
   No. of students = {{x}}
 </p>
+<form [formGroup]="studentform" (ngSubmit)="onSubmit()">
+  <div> <label>Name</label>  <input type="text" formControlName="name"> </div>
+  <div> <label>Marks</label>  <input type="number" formControlName="marks"> </div>
+  <button>Submit</button>
+</form>
 
-Name  <input type="text" > <br><br>
-Marks  <input type="number">
