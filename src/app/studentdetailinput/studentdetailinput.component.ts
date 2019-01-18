@@ -11,6 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class StudentdetailinputComponent implements OnInit {
 
   public x: number;
+  a:any;
+  b:any;
+  
+  public student_name =[];
+  public student_marks =[];
 
   studentform = new FormGroup({
     name : new FormControl(),
@@ -18,8 +23,14 @@ export class StudentdetailinputComponent implements OnInit {
   });
 
   onSubmit(){
-    console.log(this.studentform.get('name').value);
-    console.log(this.studentform.get('marks').value);
+    this.a=this.studentform.get('name').value;
+    this.b=this.studentform.get('marks').value
+
+    this.student_name.push(this.a);
+    this.student_marks.push(this.b);
+
+    console.log(this.student_name[0]);
+    console.log(this.student_marks[0]);
   }
 
   constructor() { }
