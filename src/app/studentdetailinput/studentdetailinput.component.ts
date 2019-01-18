@@ -11,9 +11,9 @@ import { Component, OnInit } from '@angular/core';
 export class StudentdetailinputComponent implements OnInit {
 
   public x: number;
-  a:any;
-  b:any;
-  
+  setlimit=false;
+  limit=1;
+
   public student_name =[];
   public student_marks =[];
 
@@ -22,15 +22,25 @@ export class StudentdetailinputComponent implements OnInit {
     marks : new FormControl()
   });
 
+  checklimit(){
+    if(this.limit>=this.x){
+      this.setlimit=true;
+    
+    }
+  }
+
   onSubmit(){
-    this.a=this.studentform.get('name').value;
-    this.b=this.studentform.get('marks').value
+    
+    this.checklimit();
 
-    this.student_name.push(this.a);
-    this.student_marks.push(this.b);
+    this.student_name.push(this.studentform.get('name').value);
+    this.student_marks.push(this.studentform.get('marks').value);
 
-    console.log(this.student_name[0]);
-    console.log(this.student_marks[0]);
+    console.log(this.student_name[this.limit-1]);
+    console.log(this.student_marks[this.limit-1]);
+
+    console.log(this.limit)
+    this.limit++;
   }
 
   constructor() { }

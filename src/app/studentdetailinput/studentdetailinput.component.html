@@ -4,6 +4,6 @@
 <form [formGroup]="studentform" (ngSubmit)="onSubmit()">
   <div> <label>Name</label>  <input type="text" formControlName="name"> </div>
   <div> <label>Marks</label>  <input type="number" formControlName="marks"> </div>
-  <button>Submit</button>
+  <button [disabled]="setlimit">Submit</button>
 </form>
 
