@@ -6,22 +6,26 @@
 
     <form [formGroup]="studentform" (ngSubmit)="onSubmit()">
     <tr> <td>  <label>Name</label> </td> 
-    <td>  <input class='center' type="text" formControlName="name"> </td> </tr>
+    <td>  <input id="name" class='center' type="text" formControlName="name"> </td> </tr>
     <tr> <td>  <label>Marks</label>  </td>
-    <td>  <input class='center' type="number" formControlName="marks"> </td> </tr>
+    <td>  <input id="mark" class='center' type="number" formControlName="marks"> </td> </tr>
   
     <tr> <td colspan="2" align="center"> <label>{{limit - 1}} student's detail filled</label> </td></tr>
 
     <tr> <td colspan="2" align="center" >  <button [disabled]="setlimit">Submit</button> </td></tr>
+
+    </form>
+    <tr><td colspan="2" align="center" > <button onclick="document.getElementById('name').value = ''; document.getElementById('mark').value = ''"> Clear fields </button> </td>
+    </tr>
   
     <!-- <td align="center"> <button [disabled]="setproceed" (click)="onContinue()" routerLink="/output">Proceed</button> </td> </tr> -->
-    </form>
+
     <tr><td align="center"> <button [disabled]="setproceed" (click)="onContinue()" routerLink="/output">Proceed</button> </td> </tr>
 
 </table>
 
 
-
+    
 
 
 <br><br>
