@@ -78,6 +78,11 @@ export class StudentdetailinputComponent implements OnInit {
       alert("provide a valid input (0 - 100)");
       return false;
     }
+
+    if(this.student_name.includes(this.studentform.get('name').value)==true){
+      alert("duplicates are not allowed");
+      return false;
+    }
     
     this.student_name.push(this.studentform.get('name').value);
     this.student_marks.push(this.studentform.get('marks').value);
