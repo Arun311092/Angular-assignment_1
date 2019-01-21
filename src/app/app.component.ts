@@ -12,7 +12,7 @@ export class AppComponent {
   
   acceptNo(x){
 
-    if(x<1||x>10)
+    if(x<1||x>10||x.match(/[0-9]+\.[0-9]+$/))
     {
       alert("provide a valid input (1 - 10)");
       return false;
