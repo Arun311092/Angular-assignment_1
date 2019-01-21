@@ -1,9 +1,20 @@
-<p>
-  No. of students = {{x}}
-</p>
-<form [formGroup]="studentform" (ngSubmit)="onSubmit()">
-  <div> <label>Name</label>  <input type="text" formControlName="name"> </div>
-  <div> <label>Marks</label>  <input type="number" formControlName="marks"> </div>
-  <button [disabled]="setlimit">Submit</button>
-</form>
+<br><br><br><br><br>
 
+<table align="left" >
+
+    <tr> <td colspan="2" align = "center"> <label> No. of students = {{x}} </label> </td> </tr>
+
+    <form [formGroup]="studentform" (ngSubmit)="onSubmit()">
+    <tr> <td>  <label>Name</label> </td> 
+    <td>  <input class='center' type="text" formControlName="name"> </td> </tr>
+    <tr> <td>  <label>Marks</label>  </td>
+    <td>  <input class='center' type="number" formControlName="marks"> </td> </tr>
+  
+    <tr> <td>  <button [disabled]="setlimit">Submit</button> </td>
+  
+    <td align="center"> <button [disabled]="setproceed" (click)="onContinue()" routerLink="/output">Proceed</button> </td> </tr>
+
+    </form>
+</table>
+
+<br><br>

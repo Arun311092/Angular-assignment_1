@@ -1,0 +1,25 @@
+
+<table align="center">
+  <tr> <td> <label>Enter the number of top students you wish to see </label> </td>
+    <td> <input type="number" #top > </td> </tr>
+  <tr> <td colspan="2" align="center" ><button (click)="onClick(top.value)">Submit o/p</button> </td> </tr>
+</table>
+
+<br>
+
+<table align="center" *ngIf = "c">
+  <tr>
+    <th>Name(s)</th>
+    <td *ngFor = "let name of b">
+      {{name}}
+    </td>
+  </tr>
+  <tr>
+    <th>Mark(s)</th>
+    <td *ngFor = "let mark of a">
+      {{mark}}
+    </td>
+  </tr>
+</table>
+
+

@@ -1,0 +1,10 @@
+.center{
+    width: 200px;
+    margin: 10px auto;
+    text-align:center;
+  }
+
+table{
+    background: rgb(114, 252, 114);
+    opacity:0.8;
+}

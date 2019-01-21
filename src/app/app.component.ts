@@ -11,6 +11,13 @@ export class AppComponent {
   setButton=false;
   
   acceptNo(x){
+
+    if(x<1||x>10)
+    {
+      alert("provide a valid input (1 - 10)");
+      return false;
+    }
+
     this.stud_No=x;
     this.setButton=true;
     console.log(this.stud_No);

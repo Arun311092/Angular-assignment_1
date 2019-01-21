@@ -1,7 +1,13 @@
-<h6>Enter the No. of students</h6>
-<input type="number" #stud_no ><br>
-<button (click)="acceptNo(stud_no.value)" [disabled]="setButton"> Submit </button>
+<table align="left">
+    <tr> <td align="center"> <label class='center'>Enter the No. of students </label> </td> 
+    <tr> <td> <input class='center' type="number" #stud_no ><br> </td> </tr>
+    <tr> <td align="center"><button (click)="acceptNo(stud_no.value)"  [disabled]="setButton"> Submit </button> </td> </tr>
+</table>
 
-<app-studentdetailinput [x]="stud_No"></app-studentdetailinput>
+<br><br><br><br>
+
+<app-studentdetailinput [x]="stud_No" [setlimit]="!setButton"></app-studentdetailinput>
+
+<!--  <app-studentdetailoutput></app-studentdetailoutput> -->
 
 <router-outlet></router-outlet>

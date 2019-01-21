@@ -1,0 +1,17 @@
+td, th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center; 
+    background-color:rgb(255, 168, 87);
+    opacity:0.8;
+  }
+  th {
+    background-color: lightblue;
+  }
+  td:hover {
+      background-color:#fcff3ae5;
+    }
+
+    .mytab{
+        text-align: center;
+    }

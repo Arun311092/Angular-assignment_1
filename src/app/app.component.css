@@ -1,0 +1,11 @@
+.center{
+    width: 200px;
+    margin: 10px auto;
+    text-align:center;
+  }
+
+  table{
+    border: 10px dotted black;
+    background: yellow;
+    opacity:0.8;
+  }
