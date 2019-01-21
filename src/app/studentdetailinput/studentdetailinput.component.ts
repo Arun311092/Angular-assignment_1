@@ -110,8 +110,10 @@ export class StudentdetailinputComponent implements OnInit {
 
   onContinue(){
     //passing value to the service
-    this.detail.changeNo(this.x,this.student_marks,this.student_name);
     this.setproceed=true;
+
+    this.detail.changeNo(this.x,this.student_marks,this.student_name);
+    
   }
 
 }

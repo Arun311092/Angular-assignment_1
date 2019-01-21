@@ -10,11 +10,14 @@
     <tr> <td>  <label>Marks</label>  </td>
     <td>  <input class='center' type="number" formControlName="marks"> </td> </tr>
   
-    <tr> <td>  <button [disabled]="setlimit">Submit</button> </td>
+    <tr> <td colspan="2" align="center" >  <button [disabled]="setlimit">Submit</button> </td></tr>
   
-    <td align="center"> <button [disabled]="setproceed" (click)="onContinue()" routerLink="/output">Proceed</button> </td> </tr>
-
+    <!-- <td align="center"> <button [disabled]="setproceed" (click)="onContinue()" routerLink="/output">Proceed</button> </td> </tr> -->
     </form>
+    <tr><td align="center"> <button [disabled]="setproceed" (click)="onContinue()" routerLink="/output">Proceed</button> </td> </tr>
+
 </table>
+
+
 
 <br><br>
